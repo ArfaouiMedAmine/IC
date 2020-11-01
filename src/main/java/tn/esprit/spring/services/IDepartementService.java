@@ -11,7 +11,7 @@ public interface IDepartementService {
 	public List<Departement> getAllDepartements();
 
 
-	
+	public Departement AddDepartement(Departement d);
 	
 	
 
