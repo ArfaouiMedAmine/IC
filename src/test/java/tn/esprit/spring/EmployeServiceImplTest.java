@@ -18,30 +18,30 @@ import tn.esprit.spring.services.IEmployeService;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class EmployeServiceImplTest {
-	
-	@Autowired 
-	IEmployeService es; 
-	
+
+	@Autowired
+	IEmployeService es;
+
 	@Test
 	public void testAddOrUpdateEmploye() throws ParseException {
-		
-		 
-		Employe e = new Employe("mayssa","mayssa","Mayssa1@mayssa.mayssa", "Mayssa1", true, Role.INGENIEUR); 
-		Employe EmployeAdded = es.addOrUpdateEmploye(e); 
+
+		Employe e = new Employe("arfaoui", "med", "arfa1@marfa.arfa", "arfa", true, Role.INGENIEUR);
+		Employe EmployeAdded = es.addOrUpdateEmploye(e);
 		assertEquals(e.getNom(), EmployeAdded.getNom());
 	}
-	
 
 
-//	@Test
-//	public void testRetrieveEmployeById(int employeId) {
-//		Employe employe = es.deleteEmployeById(employeId); 
-//		assertEquals(1L, employe.getId());
-//	}
-//	
-	
-	
 
+	@Test
+	public void testgetAllEmployes() {
+		List<Employe> listEmployees = es.getAllEmployes();
+		assertEquals(6, listEmployees.size());
+	}
 	
+	
+	@Test
+	public void testdeleteEmployeById() {
+		es.deleteEmployeById(3);
+	}
 
 }

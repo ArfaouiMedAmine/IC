@@ -112,7 +112,7 @@ public class EmployeServiceImpl implements IEmployeService {
 	public void deleteEmployeById(int employeId)
 	{
 		Employe employe = employeRepository.findById(employeId).get();
-
+		l.info("in  deleteemploye id = " + employeId);
 		//Desaffecter l'employe de tous les departements
 		//c'est le bout master qui permet de mettre a jour
 		//la table d'association
@@ -121,6 +121,7 @@ public class EmployeServiceImpl implements IEmployeService {
 		}
 
 		employeRepository.delete(employe);
+		l.info("employe deleted : " + employe);
 		
 	}
 
@@ -165,7 +166,13 @@ public class EmployeServiceImpl implements IEmployeService {
 	}
 
 	public List<Employe> getAllEmployes() {
-		return (List<Employe>) employeRepository.findAll();
+		l.info("In  getAllEmployees : ");
+		List<Employe> employees =(List<Employe>) employeRepository.findAll();
+		for (Employe employe : employees) {
+			l.debug("employe +++ : " + employe);
+		}
+		l.info("Out of retrieveAllUsers."); 
+		return employees;
 	}
 
 }
