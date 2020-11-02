@@ -10,7 +10,8 @@
 	</parent>
 	<groupId>tn.esprit.spring</groupId>
 	<artifactId>timesheet</artifactId>
-	<version>3.0</version>
+	<version>5.0</version>
+	<packaging>jar</packaging>
 	<name>timesheet</name>
 	<description>timesheet</description>
 
