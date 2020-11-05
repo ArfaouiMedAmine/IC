@@ -10,8 +10,7 @@
 	</parent>
 	<groupId>tn.esprit.spring</groupId>
 	<artifactId>timesheet</artifactId>
-	<version>5.0</version>
-	<packaging>jar</packaging>
+	<version>2.0</version>
 	<name>timesheet</name>
 	<description>timesheet</description>
 
@@ -91,11 +90,12 @@
 			<artifactId>primefaces</artifactId>
 			<version>6.1</version>
 		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.16.16</version>
-		</dependency>
+<dependency>
+  <groupId>org.projectlombok</groupId>
+  <artifactId>lombok</artifactId>
+  <version>1.18.2</version>
+  <scope>provided</scope>
+</dependency>
 		<!-- JSF -->
 		
 		<dependency>

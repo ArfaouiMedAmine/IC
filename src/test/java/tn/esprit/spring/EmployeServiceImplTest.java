@@ -32,16 +32,16 @@ public class EmployeServiceImplTest {
 
 
 
-	@Test
-	public void testgetAllEmployes() {
-		List<Employe> listEmployees = es.getAllEmployes();
-		assertEquals(6, listEmployees.size());
-	}
+//	@Test
+//	public void testgetAllEmployes() {
+//		List<Employe> listEmployees = es.getAllEmployes();
+//		assertEquals(6, listEmployees.size());
+//	}
 	
 	
-	@Test
-	public void testdeleteEmployeById() {
-		es.deleteEmployeById(3);
-	}
+//	@Test
+//	public void testdeleteEmployeById() {
+//		es.deleteEmployeById(4);
+//	}
 
 }
